@@ -8,6 +8,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import java.util.List;
+
 public class ParentClass {
 
 
@@ -66,4 +68,21 @@ public class ParentClass {
     }
 
 
+    public void verifyElementContainsText(WebElement element, String text){
+
+        wait.until(ExpectedConditions.textToBePresentInElement(element,text));
+
+        System.out.println(element.getText());
+        System.out.println(text);
+
+        Assert.assertTrue(element.getText().toLowerCase().contains(text.toLowerCase()));
+
+
+    }
+
+    // todo Ekleme
+    public List<WebElement> waitVisibleListAllElement(List<WebElement> elementList){
+        wait.until(ExpectedConditions.visibilityOfAllElements(elementList));
+        return elementList;
+    }
 }
