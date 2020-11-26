@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 
 import java.util.List;
 
@@ -246,4 +247,6 @@ public class MainContent_SalaryTypes extends ParentClass_SalaryTypes {
 
 
     }
+
+
 }
