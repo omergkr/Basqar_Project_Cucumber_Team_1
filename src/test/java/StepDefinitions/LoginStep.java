@@ -1,6 +1,6 @@
 package StepDefinitions;
 
-import Pages.PositionSalaryAndPositionsContent;
+import Pages.PositionSalary_Positions_BankAccounts_Content;
 import Utilities.Driver;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -13,7 +13,7 @@ public class LoginStep {
 
 
     WebDriver driver;
-    PositionSalaryAndPositionsContent mainContent = new PositionSalaryAndPositionsContent();
+    PositionSalary_Positions_BankAccounts_Content mainContent = new PositionSalary_Positions_BankAccounts_Content();
 
 
     @Given("^Navigate to basqar$")

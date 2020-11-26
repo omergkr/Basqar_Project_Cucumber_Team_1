@@ -10,14 +10,14 @@ import org.testng.Assert;
 
 import java.util.List;
 
-public class PositionSalaryAndPositionsContent extends ParentClass {
+public class PositionSalary_Positions_BankAccounts_Content extends ParentClass {
 
 
     WebElement currentElemet;
     List<WebElement> currentList;
     By currentolocater;
 
-    public PositionSalaryAndPositionsContent() {
+    public PositionSalary_Positions_BankAccounts_Content() {
 
         PageFactory.initElements(driver, this);
 
@@ -61,6 +61,15 @@ public class PositionSalaryAndPositionsContent extends ParentClass {
     @FindBy(xpath = "//ms-text-field[@formcontrolname='name']/input")
     private WebElement inputPositionName;
 
+
+    @FindBy(xpath = "//ms-masked-text-field[@formcontrolname='iban']/input")
+    private WebElement inputIban;
+
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='integrationCode']/input")
+    private WebElement integrationCode;
+
+    //ms-text-field[@formcontrolname='integrationCode']/input
+
     @FindBy(xpath = "//ms-text-field[@formcontrolname='shortName']/input")
     private WebElement inputShortName;
 
@@ -75,6 +84,12 @@ public class PositionSalaryAndPositionsContent extends ParentClass {
 
     @FindBy(xpath = "//input[@data-placeholder='Name']")
     private WebElement PositionSalarayNameSearch;
+
+
+    @FindBy(xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.NAME']/input")
+    private WebElement bankAccountsNameSearch;
+
+
 
     @FindBy(xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.NAME']//input")
     private WebElement PositionNameSearch;
@@ -170,6 +185,29 @@ private WebElement salaryHistoryEditIcon;
     @FindBy(xpath = "//div//h3[text()='  Positions ']")
     private WebElement positionspagetitle;
 
+
+    @FindBy(xpath = "//div//h3[text()='  Bank Accounts ']")
+    private WebElement bankAccountstitle;
+
+
+    @FindBy(xpath = "(//span[text()='Setup'])[1]")
+    private WebElement firstSetup;
+
+
+
+    @FindBy(xpath = "//span[text()='Parameters']")
+    private WebElement parameters;
+
+    @FindBy(xpath = "(//span[text()='Bank Accounts'])[1]")
+    private WebElement bankAccounts;
+
+    @FindBy(xpath = "(//span[text()='Currency'])[3]")
+    private WebElement bankAccountcurrency;
+
+    @FindBy(xpath = "//span[text()=' USD ']")
+    private WebElement usd;
+
+
     public void findAndClickElement(String elementName) {
 
         switch (elementName) {
@@ -237,6 +275,27 @@ private WebElement salaryHistoryEditIcon;
             case "positions":
                 currentElemet = positions;
                 break;
+
+            case "firstSetup":
+                currentElemet = firstSetup;
+                break;
+
+            case "bankAccounts":
+                currentElemet = bankAccounts;
+                break;
+
+            case "parameters":
+                currentElemet = parameters;
+                break;
+
+            case "bankAccountcurrency":
+                currentElemet = bankAccountcurrency;
+                break;
+            case "usd":
+                currentElemet = usd;
+                break;
+
+
         }
 
         clickElement(currentElemet);
@@ -280,6 +339,10 @@ private WebElement salaryHistoryEditIcon;
                 currentElemet = PositionShortNameSearch;
                 break;
 
+            case "bankAccountsNameSearch":
+                currentElemet = bankAccountsNameSearch;
+                break;
+
 
 
             case "experienceRange":
@@ -289,6 +352,15 @@ private WebElement salaryHistoryEditIcon;
             case "salary":
                 currentElemet = salary;
                 break;
+
+            case "inputIban":
+                currentElemet = inputIban;
+                break;
+
+            case "integrationCode":
+                currentElemet = integrationCode;
+                break;
+
 
 
         }
@@ -306,6 +378,10 @@ private WebElement salaryHistoryEditIcon;
 
             case "positionspagetitle":
                 currentElemet=positionspagetitle;
+                break;
+
+            case "bankAccountstitle":
+                currentElemet=bankAccountstitle;
                 break;
 
 
