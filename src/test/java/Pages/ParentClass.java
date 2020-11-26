@@ -19,7 +19,7 @@ public class ParentClass {
     public ParentClass() {
 
         driver= Driver.getDriver();
-        wait=new WebDriverWait(driver,10);
+        wait=new WebDriverWait(driver,20);
 
 
     }

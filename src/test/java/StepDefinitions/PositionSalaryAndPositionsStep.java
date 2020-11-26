@@ -1,6 +1,6 @@
 package StepDefinitions;
 
-import Pages.PositionSalaryAndPositionsContent;
+import Pages.PositionSalary_Positions_BankAccounts_Content;
 import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
@@ -11,7 +11,7 @@ import java.util.List;
 public class PositionSalaryAndPositionsStep {
 
 
-    PositionSalaryAndPositionsContent mainContent=new PositionSalaryAndPositionsContent();
+    PositionSalary_Positions_BankAccounts_Content mainContent=new PositionSalary_Positions_BankAccounts_Content();
 
     @When("^click on button with button name$")
     public void clickOnButtonWithButtonName(DataTable elements) throws InterruptedException {
