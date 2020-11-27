@@ -1,0 +1,36 @@
+Feature: Login Functionality
+
+  Background:
+    Given Navigate to basqar
+    When Enter username and password and  click Login button
+    Then User should login successfully
+    Given Navigate to Cost Centers page
+
+
+  Scenario: US_12 TC_01 (Go to Cost Centers page)
+    Then CostCenters page title control
+
+  Scenario: US_12 TC_02 (Creat a Cost Centers)
+    When Click add button
+    Then Enter name as "Fatih" as code "akar" as order no "867"
+    Then Success message should be displayed
+
+  Scenario: US_12 TC_03 (Cost Center Delete)
+
+    When   User can Cost Center delete the "Fatih"
+    Then Success delete message should be displayed
+
+  Scenario: US_12 TC_04 (Cost Center edit)
+    When User edit the "holoe" to "akmazlar"
+    Then Success Edit message should be displayed
+
+
+
+
+
+
+
+
+
+
+
