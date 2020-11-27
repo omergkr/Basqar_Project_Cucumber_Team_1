@@ -18,7 +18,7 @@ Feature: Subject functionality
 
   Scenario: US_4 TC_03
     When click on element with name
-    Then  Create a Subject name as "Grup1" and code as "1234"
+    Then  Create a Subject name as "Grup1" and code as "063"
     And error message should be displayed
 
   Scenario: US_4 TC_04

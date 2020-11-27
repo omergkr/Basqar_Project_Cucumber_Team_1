@@ -9,14 +9,14 @@ import org.testng.Assert;
 
 import java.util.List;
 
-public class MainContentSubject extends ParentClassSubject {
+public class SubjectAndSalaryModifiers extends ParentClassSubject {
 
 
     WebElement currentElement;
     WebElement myElement;
 List<WebElement> currentList;
 
-    public MainContentSubject() {
+    public SubjectAndSalaryModifiers() {
 
         PageFactory.initElements(driver, this);
 
@@ -47,20 +47,6 @@ List<WebElement> currentList;
     @FindBy(xpath = "//ms-text-field[@formcontrolname='code']/input")
     private WebElement codeInput;
 
-//    @FindBy(xpath = "(//ms-add-button//button)[2]")
-//    private WebElement addSubjectCategoryButton;
-//
-//    @FindBy(xpath = "(//ms-text-field[@formcontrolname='name']/input)[2]")
-//    private WebElement newSubjektName;
-//
-//    @FindBy(xpath = "(//ms-text-field[@formcontrolname='code']/input)[2]")
-//    private WebElement newSubjektCode;
-//
-//    @FindBy(xpath = "(//ms-save-button//button)[2]")
-//    private WebElement newSubjectSaveButton;
-//
-//    @FindBy(xpath = "(//button[@aria-describedby='cdk-describedby-message-17'])[2]")
-//    private WebElement newSubjectCloseButton;
 
     @FindBy(xpath = "(//span[text()='Subject Category'])[1]")
     private WebElement CategoryListBtn;
@@ -162,8 +148,9 @@ private WebElement salaryModfTitle;
     @FindBy(xpath = "//mat-select[@formcontrolname ='modifierType']")
     private WebElement modifierTypeBtn;
 
-    @FindBy(xpath = "(//div//mat-option)[3]")
+    @FindBy(xpath = "(//div//mat-option)[1]")
     private WebElement modfTypeSelect;
+
     @FindBy(xpath = "//input[@name='integrationCode']")
     private WebElement integrationCodeAdd;
 
@@ -174,8 +161,23 @@ private WebElement salaryModfTitle;
     @FindBy(xpath = "//ms-currency-field//input")
     private WebElement amountAdd;
 
+    @FindBy(xpath = "//ms-save-button//button")
+    private WebElement salaryModifersSaveBtn;
 
+    @FindBy(xpath = "//ms-delete-button/button")
+    public WebElement deleteSalryMdfBtn;
 
+    @FindBy(xpath = "//span[text()=' Yes ']")
+    private WebElement yesSalryMdfBtn;
+
+    @FindBy(xpath = "(//ms-edit-button//button)[1]")
+    private WebElement EditSalryMdfBtn;
+
+    @FindBy(xpath = "(//mat-form-field//input)[1]")
+    private WebElement searchDescription;
+
+    @FindBy(xpath = "//span[text()=' Search ']")
+    private WebElement searchDescrBtn;
 
 
 
@@ -196,17 +198,6 @@ private WebElement salaryModfTitle;
                 currentElement = subjectAddButton;
                 break;
 
-//            case "addSubjectCategoryButton":
-//                currentElement = addSubjectCategoryButton;
-//                break;
-//
-//            case "newSubjectSaveButton":
-//                currentElement = newSubjectSaveButton;
-//                break;
-//
-//            case "newSubjectCloseButton":
-//                currentElement = newSubjectCloseButton;
-//                break;
 
             case "CategoryListBtn":
                 currentElement = CategoryListBtn;
@@ -275,8 +266,29 @@ private WebElement salaryModfTitle;
                 break;
 
 
+            case "amountAdd":
+                currentElement = amountAdd;
+                break;
 
+            case "salaryModifersSaveBtn":
+                currentElement = salaryModifersSaveBtn;
+                break;
 
+            case "deleteSalryMdfBtn":
+                currentElement = deleteSalryMdfBtn;
+                break;
+
+            case "yesSalryMdfBtn":
+                currentElement = yesSalryMdfBtn;
+                break;
+
+            case "EditSalryMdfBtn":
+                currentElement = EditSalryMdfBtn;
+                break;
+
+            case "searchDescrBtn":
+                currentElement = searchDescrBtn;
+                break;
         }
         clickFunction(currentElement);
     }
@@ -302,14 +314,6 @@ private WebElement salaryModfTitle;
             case "codeInput":
                 currentElement = codeInput;
                 break;
-
-//            case "newSubjektName":
-//                currentElement = newSubjektName;
-//                break;
-//
-//            case "newSubjektCode":
-//                currentElement = newSubjektCode;
-//                break;
 
             case "searchName":
                 currentElement = searchName;
@@ -339,11 +343,16 @@ private WebElement salaryModfTitle;
             case "amountAdd":
                 currentElement = amountAdd;
                 break;
+
+            case "searchDescription":
+                currentElement = searchDescription;
+                break;
+
+
         }
 
         sendKeysFunction(currentElement, text);
     }
-
 
 
     public void findElementAndVerifyContainsText(String ElementName, String msg) {
