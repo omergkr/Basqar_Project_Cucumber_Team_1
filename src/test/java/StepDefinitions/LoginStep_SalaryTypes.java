@@ -51,6 +51,7 @@ public class LoginStep_SalaryTypes {
     }
 
 
+    
 
     @And("^Navigate to Salary Types page$")
     public void navigateToSalaryTypesPage() {

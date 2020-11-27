@@ -1,5 +1,6 @@
 package StepDefinitions;
 
+import Pages.SubjectAndSalaryModifiers;
 import Utilities.Driver;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -8,11 +9,11 @@ import org.openqa.selenium.WebDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class LoginStepSubject {
+public class LoginStepSubjectAndSalary {
 
 
     WebDriver driver;
-    MainContentSubject mainContent = new MainContentSubject();
+    SubjectAndSalaryModifiers subjectAndSalaryModifiers = new SubjectAndSalaryModifiers();
 
 
     @Given("^Navigate to basqar$")
@@ -35,12 +36,12 @@ public class LoginStepSubject {
 
 
         // Keys send to username and password
-        mainContent.findElementAndSendKeys("username", "daulet2030@gmail.com");
-        mainContent.findElementAndSendKeys("password", "TechnoStudy123@");
+        subjectAndSalaryModifiers.findElementAndSendKeys("username", "daulet2030@gmail.com");
+        subjectAndSalaryModifiers.findElementAndSendKeys("password", "TechnoStudy123@");
 
         // Elements found and clicked
-        mainContent.findAndClickElement("loginButton");
-        mainContent.findAndClickElement("gotItButton");
+        subjectAndSalaryModifiers.findAndClickElement("loginButton");
+        subjectAndSalaryModifiers.findAndClickElement("gotItButton");
 
 
 
