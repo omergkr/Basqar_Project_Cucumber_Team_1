@@ -1,6 +1,6 @@
 package StepDefinitions;
 
-import Pages.Excel_Template_Content;
+import Pages.Subjects_SalaryModifiers_Content;
 import Utilities.Driver;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -9,11 +9,11 @@ import org.openqa.selenium.WebDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class LoginStepExcelTemplate {
+public class SubjectAndSalaryStep {
 
 
     WebDriver driver;
-    Excel_Template_Content excel_template_content = new Excel_Template_Content();
+    Subjects_SalaryModifiers_Content subjectAndSalaryModifiers = new Subjects_SalaryModifiers_Content();
 
 
     @Given("^Navigate to basqar$")
@@ -36,13 +36,12 @@ public class LoginStepExcelTemplate {
 
 
         // Keys send to username and password
-        excel_template_content.findElementAndSendKeys("username", "daulet2030@gmail.com");
-        excel_template_content.findElementAndSendKeys("password", "TechnoStudy123@");
+        subjectAndSalaryModifiers.findElementAndSendKeys("username", "daulet2030@gmail.com");
+        subjectAndSalaryModifiers.findElementAndSendKeys("password", "TechnoStudy123@");
 
         // Elements found and clicked
-        excel_template_content.findAndClickElement("loginButton");
-        if(excel_template_content.gotItButton.isDisplayed()){
-        excel_template_content.findAndClickElement("gotItButton");}
+        subjectAndSalaryModifiers.findAndClickElement("loginButton");
+        subjectAndSalaryModifiers.findAndClickElement("gotItButton");
 
 
 
@@ -53,6 +52,4 @@ public class LoginStepExcelTemplate {
 
 
     }
-
-
 }

@@ -10,13 +10,13 @@ import org.testng.Assert;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Education_Setup_SubjectCategoriesContent extends ParentClass {
+public class SubjectCategories_Content extends ParentClass {
 
 
     WebElement currentElemet;
     List<WebElement> currentList;
 
-    public Education_Setup_SubjectCategoriesContent() {
+    public SubjectCategories_Content() {
 
         PageFactory.initElements(driver, this);
 

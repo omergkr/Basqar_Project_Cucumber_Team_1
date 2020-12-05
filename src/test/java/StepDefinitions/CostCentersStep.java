@@ -12,7 +12,7 @@ import org.openqa.selenium.WebDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class LoginStep_CostCenters {
+public class CostCentersStep {
 
 
     WebDriver driver;

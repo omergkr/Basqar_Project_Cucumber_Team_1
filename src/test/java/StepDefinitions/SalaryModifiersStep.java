@@ -1,15 +1,15 @@
 package StepDefinitions;
 
-import Pages.LeftNavSubject;
-import Pages.ParentClassSubject;
-import Pages.SubjectAndSalaryModifiers;
+import Pages.LeftNav_Subjects;
+import Pages.ParentClass_Subject;
+import Pages.Subjects_SalaryModifiers_Content;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 
 public class SalaryModifiersStep {
-    ParentClassSubject parentElement =new ParentClassSubject();
-    LeftNavSubject leftNavSubject = new LeftNavSubject();
-    SubjectAndSalaryModifiers subjectAndSalaryModifiers = new SubjectAndSalaryModifiers();
+    ParentClass_Subject parentElement =new ParentClass_Subject();
+    LeftNav_Subjects leftNavSubjects = new LeftNav_Subjects();
+    Subjects_SalaryModifiers_Content subjectAndSalaryModifiers = new Subjects_SalaryModifiers_Content();
 
 
 
@@ -18,9 +18,9 @@ public class SalaryModifiersStep {
     public void navigateToSalaryModifiersPage() {
 
 
-        leftNavSubject.findElementAndClickFunction("humanButton");
-        leftNavSubject.findElementAndClickFunction("humanSetupButton");
-        leftNavSubject.findElementAndClickFunction("SalaryModfButton");
+        leftNavSubjects.findElementAndClickFunction("humanButton");
+        leftNavSubjects.findElementAndClickFunction("humanSetupButton");
+        leftNavSubjects.findElementAndClickFunction("SalaryModfButton");
     }
 
     @Then("^Salary Modifiers page title control$")

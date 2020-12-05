@@ -1,24 +1,24 @@
 package StepDefinitions;
 
-import Pages.LeftNavSubject;
-import Pages.ParentClassSubject;
-import Pages.SubjectAndSalaryModifiers;
+import Pages.LeftNav_Subjects;
+import Pages.ParentClass_Subject;
+import Pages.Subjects_SalaryModifiers_Content;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class SubjectSteps {
 
-ParentClassSubject parentElement =new ParentClassSubject();
-    LeftNavSubject leftNavSubject = new LeftNavSubject();
-    SubjectAndSalaryModifiers subjectAndSalaryModifiers = new SubjectAndSalaryModifiers();
+ParentClass_Subject parentElement =new ParentClass_Subject();
+    LeftNav_Subjects leftNavSubjects = new LeftNav_Subjects();
+    Subjects_SalaryModifiers_Content subjectAndSalaryModifiers = new Subjects_SalaryModifiers_Content();
 
     @Then("^Navigate to subject page$")
     public void navigate_to_subject_page()  {
 
-        leftNavSubject.findElementAndClickFunction("education");
-        leftNavSubject.findElementAndClickFunction("setupEducation");
-        leftNavSubject.findElementAndClickFunction("subject");
+        leftNavSubjects.findElementAndClickFunction("education");
+        leftNavSubjects.findElementAndClickFunction("setupEducation");
+        leftNavSubjects.findElementAndClickFunction("subject");
 
     }
 
@@ -113,9 +113,9 @@ Thread.sleep(1000);
 
     @Then("^user subject category should not be deleted$")
     public void userSubjectCategoryShouldNotBeDeleted() {
-parentElement.scrollToElement(leftNavSubject.SubjectCategoriesButton);
+parentElement.scrollToElement(leftNavSubjects.SubjectCategoriesButton);
 
-leftNavSubject.findElementAndClickFunction("SubjectCategoriesButton");
+leftNavSubjects.findElementAndClickFunction("SubjectCategoriesButton");
 
     }
 
