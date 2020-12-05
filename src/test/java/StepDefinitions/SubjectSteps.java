@@ -33,9 +33,9 @@ ParentClass_Subject parentElement =new ParentClass_Subject();
     }
 
 
-    @When("^click on element with name$")
-    public void clickOnElementWithName() {
-    }
+//    @When("^click on element with name$")
+//    public void clickOnElementWithName() {
+//    }
 
     @Then("^Create a Subject name as \"([^\"]*)\" and code as \"([^\"]*)\"$")
     public void createASubjectNameAsAndCodeAs(String name, String code) throws InterruptedException {
@@ -59,9 +59,9 @@ Thread.sleep(1000);
 
     }
 
-    @And("^Succes message should be displayed$")
-    public void succesMessageShouldBeDisplayed() {
-    }
+//    @And("^Succes message should be displayed$")
+//    public void succesMessageShouldBeDisplayed() {
+//    }
 
 
     @Then("^Subject page title control$")
@@ -99,17 +99,17 @@ Thread.sleep(1000);
       subjectAndSalaryModifiers.findAndClickElement("activeButton");
     }
 
-    @Then("^When searching by  name as \"([^\"]*)\"$")
-    public void whenSearchingByNameAs(String name)  {
-        subjectAndSalaryModifiers.findElementAndSendKeys("searchName",name);
-        subjectAndSalaryModifiers.findAndClickElement("searchButton");
+//    @Then("^When searching by  name as \"([^\"]*)\"$")
+//    public void whenSearchingByNameAs(String name)  {
+//        subjectAndSalaryModifiers.findElementAndSendKeys("searchName",name);
+//        subjectAndSalaryModifiers.findAndClickElement("searchButton");
+//
+//    }
 
-    }
-
-    @Then("^Check list with listname as \"([^\"]*)\" and searchtext as \"([^\"]*)\"$")
-    public void checkListWithListnameAsAndSearchtextAs(String listname, String text)  {
-        subjectAndSalaryModifiers.checklist(listname,text);
-    }
+//    @Then("^Check list with listname as \"([^\"]*)\" and searchtext as \"([^\"]*)\"$")
+//    public void checkListWithListnameAsAndSearchtextAs(String listname, String text)  {
+//        subjectAndSalaryModifiers.checklist(listname,text);
+//    }
 
     @Then("^user subject category should not be deleted$")
     public void userSubjectCategoryShouldNotBeDeleted() {

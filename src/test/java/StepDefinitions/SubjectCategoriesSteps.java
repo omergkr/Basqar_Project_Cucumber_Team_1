@@ -21,17 +21,17 @@ public class SubjectCategoriesSteps {
     }
 
 
-    @Then("^Create a Subject name as \"([^\"]*)\" and code as \"([^\"]*)\"$")
-    public void createASubjectNameAsAndCodeAs(String name, String code) {
-
-        subjectCategoriesContent.findAndClickElement("Subject_Add");
-        subjectCategoriesContent.findElementAndSendKeys("nameInput", name);
-        subjectCategoriesContent.findElementAndSendKeys("codeInput", code);
-
-        if (subjectCategoriesContent.saveButton.isEnabled())
-        subjectCategoriesContent.findAndClickElement("saveButton");
-
-    }
+//    @Then("^Create a Subject name as \"([^\"]*)\" and code as \"([^\"]*)\"$")
+//    public void createASubjectNameAsAndCodeAs(String name, String code) {
+//
+//        subjectCategoriesContent.findAndClickElement("Subject_Add");
+//        subjectCategoriesContent.findElementAndSendKeys("nameInput", name);
+//        subjectCategoriesContent.findElementAndSendKeys("codeInput", code);
+//
+//        if (subjectCategoriesContent.saveButton.isEnabled())
+//        subjectCategoriesContent.findAndClickElement("saveButton");
+//
+//    }
 
     @Then("^Succes message should be displayed$")
     public void succesMessageShouldBeDisplayed() {
@@ -59,13 +59,13 @@ public class SubjectCategoriesSteps {
 
 // Todo Edit und Delet
 
-    @When("^User edit the \"([^\"]*)\" to \"([^\"]*)\"$")
-    public void userEditTheTo(String searcofSubjectName, String newSubjecName) {
-
-        subjectCategoriesContent.editAndDeleteFunction(searcofSubjectName, "edit");
-        subjectCategoriesContent.findElementAndSendKeys("nameInput", newSubjecName);
-        subjectCategoriesContent.findAndClickElement("saveButton");
-    }
+//    @When("^User edit the \"([^\"]*)\" to \"([^\"]*)\"$")
+//    public void userEditTheTo(String searcofSubjectName, String newSubjecName) {
+//
+//        subjectCategoriesContent.editAndDeleteFunction(searcofSubjectName, "edit");
+//        subjectCategoriesContent.findElementAndSendKeys("nameInput", newSubjecName);
+//        subjectCategoriesContent.findAndClickElement("saveButton");
+//    }
 
 
     @Then("^Messag:Subject Category successfully updated$")
@@ -92,14 +92,14 @@ public class SubjectCategoriesSteps {
 
     }
 
-    @When("^When searching by  name as \"([^\"]*)\"$")
-    public void whenSearchingByNameAs(String name) {
-
-        subjectCategoriesContent.findElementAndSendKeys("searchName",name);
-        subjectCategoriesContent.findAndClickElement("searchButton");
-
-
-    }
+//    @When("^When searching by  name as \"([^\"]*)\"$")
+//    public void whenSearchingByNameAs(String name) {
+//
+//        subjectCategoriesContent.findElementAndSendKeys("searchName",name);
+//        subjectCategoriesContent.findAndClickElement("searchButton");
+//
+//
+//    }
 
     @And("^Save Button is disable$")
     public void saveButtonIsDisable() {
@@ -109,12 +109,12 @@ subjectCategoriesContent.elementisEnabled("saveButton");
 
     }
 
-    @Then("^Check list with listname as \"([^\"]*)\" and searchtext as \"([^\"]*)\"$")
-    public void checkListWithListnameAsAndSearchtextAs(String listname, String text) {
-
-        subjectCategoriesContent.checklist(listname,text);
-
-    }
+//    @Then("^Check list with listname as \"([^\"]*)\" and searchtext as \"([^\"]*)\"$")
+//    public void checkListWithListnameAsAndSearchtextAs(String listname, String text) {
+//
+//        subjectCategoriesContent.checklist(listname,text);
+//
+//    }
 
     @Then("^SubjectCategories page title control$")
     public void subjectcategoriesPageTitleControl() {

@@ -21,34 +21,34 @@ public class CostCentersStep {
     ParentClass_CostCenters parentSalaryType=new ParentClass_CostCenters();
 
 
-    @Given("^Navigate to basqar$")
-    public void navigateToBasqar() {
-
-        driver = Driver.getDriver();
-        driver.get("https://test.basqar.techno.study/");
-        driver.manage().window().maximize();
-        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-
-    }
-
-
-    @When("^Enter username and password and  click Login button$")
-    public void enterUsernameAndPasswordAndClickLoginButton() {
-
-
-        mainContent.findElementAndSendKeys("username", "daulet2030@gmail.com");
-        mainContent.findElementAndSendKeys("password", "TechnoStudy123@");
-        mainContent.findAndClickElement("loginButton");
-        mainContent.findAndClickElement("gotItButton");
-
-
-    }
-    @Then("^User should login successfully$")
-    public void user_should_login_successfully() {
-
-    }
+//    @Given("^Navigate to basqar$")
+//    public void navigateToBasqar() {
+//
+//        driver = Driver.getDriver();
+//        driver.get("https://test.basqar.techno.study/");
+//        driver.manage().window().maximize();
+//        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//
+//
+//    }
+//
+//
+//    @When("^Enter username and password and  click Login button$")
+//    public void enterUsernameAndPasswordAndClickLoginButton() {
+//
+//
+//        mainContent.findElementAndSendKeys("username", "daulet2030@gmail.com");
+//        mainContent.findElementAndSendKeys("password", "TechnoStudy123@");
+//        mainContent.findAndClickElement("loginButton");
+//        mainContent.findAndClickElement("gotItButton");
+//
+//
+//    }
+//    @Then("^User should login successfully$")
+//    public void user_should_login_successfully() {
+//
+//    }
     @Given("^Navigate to Cost Centers page$")
     public void navigateToCostCentersPage() {
         leftNav.findElementAndClickFunction("BudgetButton");
@@ -69,10 +69,10 @@ public class CostCentersStep {
     }
 
 
-    @Then("^Success message should be displayed$")
-    public void successMessageShouldBeDisplayed() {
-        mainContent.findElementAndVerifyContainsText("costCenterSuccessfullyText", "Cost Center successfully created");
-    }
+//    @Then("^Success message should be displayed$")
+//    public void successMessageShouldBeDisplayed() {
+//        mainContent.findElementAndVerifyContainsText("costCenterSuccessfullyText", "Cost Center successfully created");
+//    }
 
 
 
@@ -105,10 +105,10 @@ public class CostCentersStep {
         mainContent.findAndClickElement("yesButton");
 
     }
-    @Then("^Success delete message should be displayed$")
-    public void successDeleteMessageShouldBeDisplayed() {
-        mainContent.findElementAndVerifyContainsText("message", "successfully");
-    }
+//    @Then("^Success delete message should be displayed$")
+//    public void successDeleteMessageShouldBeDisplayed() {
+//        mainContent.findElementAndVerifyContainsText("message", "successfully");
+//    }
 
 
     @Then("^Success Edit message should be displayed$")
@@ -116,25 +116,6 @@ public class CostCentersStep {
         mainContent.findElementAndVerifyContainsText("message", "successfully");
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -149,14 +130,14 @@ public class CostCentersStep {
         if (mainContent.saveButton.isEnabled())
             mainContent.findAndClickElement("saveButton");
     }
-    @When("^User edit the \"([^\"]*)\" to \"([^\"]*)\"$")
-    public void userEditTheTo(String salaryTypesName, String newSalaryName) {
-        mainContent.editAndDeleteFunction(salaryTypesName, "edit");
-        mainContent.findElementAndSendKeys("nameInput", newSalaryName);
-
-        mainContent.findAndClickElement("saveButton");
-
-    }
+//    @When("^User edit the \"([^\"]*)\" to \"([^\"]*)\"$")
+//    public void userEditTheTo(String salaryTypesName, String newSalaryName) {
+//        mainContent.editAndDeleteFunction(salaryTypesName, "edit");
+//        mainContent.findElementAndSendKeys("nameInput", newSalaryName);
+//
+//        mainContent.findAndClickElement("saveButton");
+//
+//    }
 
 
 
