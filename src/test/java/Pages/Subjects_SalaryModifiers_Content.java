@@ -9,14 +9,14 @@ import org.testng.Assert;
 
 import java.util.List;
 
-public class SubjectAndSalaryModifiers extends ParentClassSubject {
+public class Subjects_SalaryModifiers_Content extends ParentClass_Subject {
 
 
     WebElement currentElement;
     WebElement myElement;
 List<WebElement> currentList;
 
-    public SubjectAndSalaryModifiers() {
+    public Subjects_SalaryModifiers_Content() {
 
         PageFactory.initElements(driver, this);
 

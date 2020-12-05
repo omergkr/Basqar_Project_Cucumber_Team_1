@@ -10,13 +10,13 @@ import org.testng.Assert;
 
 import java.util.List;
 
-public class ParentClassSubject {
+public class ParentClass_Subject {
 
 
     WebDriver driver;
     WebDriverWait wait;
 
-    public ParentClassSubject() {
+    public ParentClass_Subject() {
         driver = Driver.getDriver();
         wait = new WebDriverWait(driver, 10);
     }

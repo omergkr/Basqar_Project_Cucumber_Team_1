@@ -4,9 +4,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LeftNavSubject extends ParentClassSubject{
+public class LeftNav_Subjects extends ParentClass_Subject {
 
-    public LeftNavSubject() {
+    public LeftNav_Subjects() {
         PageFactory.initElements(driver, this);
     }
 

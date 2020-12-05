@@ -6,7 +6,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
 
-public class ExcelTemplates {
+public class ExcelTemplatesStep {
 
 
     Excel_Template_Content excel_template_content=new Excel_Template_Content();

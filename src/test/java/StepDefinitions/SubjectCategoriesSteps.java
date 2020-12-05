@@ -1,14 +1,14 @@
 package StepDefinitions;
 
-import Pages.Education_Setup_SubjectCategoriesContent;
+import Pages.SubjectCategories_Content;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
 
-public class Education_Setup_SubjectCategoriesSteps {
+public class SubjectCategoriesSteps {
 
-    Education_Setup_SubjectCategoriesContent subjectCategoriesContent = new Education_Setup_SubjectCategoriesContent();
+    SubjectCategories_Content subjectCategoriesContent = new SubjectCategories_Content();
 
     @When("^click on element with name$")
     public void clickOnElementWithName() {

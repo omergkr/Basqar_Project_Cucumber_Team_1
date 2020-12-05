@@ -1,5 +1,6 @@
 package StepDefinitions;
 
+import Pages.Excel_Template_Content;
 import Utilities.Driver;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -8,11 +9,11 @@ import org.openqa.selenium.WebDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class LoginStepSubject {
+public class ExcelTemplateLoginStep {
 
 
     WebDriver driver;
-    MainContentSubject mainContent = new MainContentSubject();
+    Excel_Template_Content excel_template_content = new Excel_Template_Content();
 
 
     @Given("^Navigate to basqar$")
@@ -35,12 +36,13 @@ public class LoginStepSubject {
 
 
         // Keys send to username and password
-        mainContent.findElementAndSendKeys("username", "daulet2030@gmail.com");
-        mainContent.findElementAndSendKeys("password", "TechnoStudy123@");
+        excel_template_content.findElementAndSendKeys("username", "daulet2030@gmail.com");
+        excel_template_content.findElementAndSendKeys("password", "TechnoStudy123@");
 
         // Elements found and clicked
-        mainContent.findAndClickElement("loginButton");
-        mainContent.findAndClickElement("gotItButton");
+        excel_template_content.findAndClickElement("loginButton");
+        if(excel_template_content.gotItButton.isDisplayed()){
+        excel_template_content.findAndClickElement("gotItButton");}
 
 
 
@@ -51,4 +53,6 @@ public class LoginStepSubject {
 
 
     }
+
+
 }
