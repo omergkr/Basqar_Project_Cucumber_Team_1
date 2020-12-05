@@ -21,34 +21,34 @@ public class SalaryTypesStep {
     ParentClass_SalaryTypes parentSalaryType=new ParentClass_SalaryTypes();
 
 
-    @Given("^Navigate to basqar$")
-    public void navigateToBasqar() {
-
-        driver = Driver.getDriver();
-        driver.get("https://test.basqar.techno.study/");
-        driver.manage().window().maximize();
-        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-
-    }
-
-
-    @When("^Enter username and password and  click Login button$")
-    public void enterUsernameAndPasswordAndClickLoginButton() {
-
-
-        mainContent.findElementAndSendKeys("username", "daulet2030@gmail.com");
-        mainContent.findElementAndSendKeys("password", "TechnoStudy123@");
-        mainContent.findAndClickElement("loginButton");
-        mainContent.findAndClickElement("gotItButton");
-
-
-    }
-    @Then("^User should login successfully$")
-    public void user_should_login_successfully() {
-
-    }
+//    @Given("^Navigate to basqar$")
+//    public void navigateToBasqar() {
+//
+//        driver = Driver.getDriver();
+//        driver.get("https://test.basqar.techno.study/");
+//        driver.manage().window().maximize();
+//        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//
+//
+//    }
+//
+//
+//    @When("^Enter username and password and  click Login button$")
+//    public void enterUsernameAndPasswordAndClickLoginButton() {
+//
+//
+//        mainContent.findElementAndSendKeys("username", "daulet2030@gmail.com");
+//        mainContent.findElementAndSendKeys("password", "TechnoStudy123@");
+//        mainContent.findAndClickElement("loginButton");
+//        mainContent.findAndClickElement("gotItButton");
+//
+//
+//    }
+//    @Then("^User should login successfully$")
+//    public void user_should_login_successfully() {
+//
+//    }
 
 
     
@@ -70,36 +70,36 @@ public class SalaryTypesStep {
     }
 
 
-    @Then("^Success message should be displayed$")
-    public void successMessageShouldBeDisplayed() {
-        mainContent.findElementAndVerifyContainsText("successfullytext", "Salary Type successfully created");
-    }
+//    @Then("^Success message should be displayed$")
+//    public void successMessageShouldBeDisplayed() {
+//        mainContent.findElementAndVerifyContainsText("successfullytext", "Salary Type successfully created");
+//    }
 
     @Then("^SalaryTypes page title control$")
     public void salarytypesPageTitleControl() {
         mainContent.findElementAndVerifyContainsText("SalaryTypesTittle", "Salary Types");
     }
 
-    @Then("^Enter name as \"([^\"]*)\" click User Type and Click Save Button$")
-    public void enterNameAsClickUserTypeAndClickSaveButton(String userName) {
+//    @Then("^Enter name as \"([^\"]*)\" click User Type and Click Save Button$")
+//    public void enterNameAsClickUserTypeAndClickSaveButton(String userName) {
+//
+//        mainContent.findElementAndSendKeys("nameInput", userName);
+//        mainContent.findAndClickElement("userType");
+//        mainContent.findAndClickElement("AdministratorButton");
+//        mainContent.findAndClickElement("saveButton");
+//
+//    }
 
-        mainContent.findElementAndSendKeys("nameInput", userName);
-        mainContent.findAndClickElement("userType");
-        mainContent.findAndClickElement("AdministratorButton");
-        mainContent.findAndClickElement("saveButton");
+//    @And("^Erros message should be displayed$")
+//    public void errosMessageShouldBeDisplayed() {
+//        mainContent.findElementAndVerifyContainsText("errorMessage", "Error!");
+//    }
 
-    }
-
-    @And("^Erros message should be displayed$")
-    public void errosMessageShouldBeDisplayed() {
-        mainContent.findElementAndVerifyContainsText("errorMessage", "Error!");
-    }
-
-    @Then("^User have to name add$")
-    public void userHaveToNameAdd() {
-        if (mainContent.saveButton.isEnabled())
-            mainContent.findAndClickElement("saveButton");
-    }
+//    @Then("^User have to name add$")
+//    public void userHaveToNameAdd() {
+//        if (mainContent.saveButton.isEnabled())
+//            mainContent.findAndClickElement("saveButton");
+//    }
 
 
     @Then("^Success delete message should be displayed$")
