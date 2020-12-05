@@ -1,5 +1,6 @@
 package StepDefinitions;
 
+import Pages.SubjectCategories_Content;
 import Utilities.Driver;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -12,7 +13,7 @@ public class SubjectsStep {
 
 
     WebDriver driver;
-    MainContentSubject mainContent = new MainContentSubject();
+    SubjectCategories_Content mainContent = new SubjectCategories_Content();
 
 
     @Given("^Navigate to basqar$")
