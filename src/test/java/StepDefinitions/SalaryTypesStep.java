@@ -123,12 +123,14 @@ public class SalaryTypesStep {
     }
 
 
-    @When("^User can salary Types delete$")
-    public void userCanSalaryTypesDelete() {
-
+    @When("^User can salary Types delete the \"([^\"]*)\"$")
+    public void userCanSalaryTypesDeleteThe(String salaryNameDelete)  {
+        mainContent.editAndDeleteFunction(salaryNameDelete,"delete");
         mainContent.findAndClickElement("deleteButton");
         mainContent.findAndClickElement("yesButton");
+
     }
+
 
     @When("^Click activ or inactiv buttons of Salary Types$")
     public void clickActivOrInactivButtonsOfSalaryTypes() {

@@ -12,7 +12,7 @@ Feature: Login Functionality
   Scenario: US_8 TC_02 (Creat a Salary Types)
 
     When click add button
-    Then Enter name as "FatihÇetin" click User Type and Click Save Button for Salary Page
+    Then Enter name as "FatihÇetinler" click User Type and Click Save Button for Salary Page
     Then Success message should be displayed for Salary Page
 
   Scenario: US_8 TC_03 (User have to a name add)
@@ -28,7 +28,7 @@ Feature: Login Functionality
 
   Scenario: US_8 TC_05 (Salary Types Delete)
 
-    When   User can salary Types delete
+    When   User can salary Types delete the "Fatihakar4"
     Then Success delete message should be displayed
 
 
