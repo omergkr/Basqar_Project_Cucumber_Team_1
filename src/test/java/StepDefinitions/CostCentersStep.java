@@ -1,22 +1,19 @@
 package StepDefinitions;
 
 import Pages.LeftNav_CostCenters;
-import Pages.MainContent_CostCenters;
+import Pages.CostCenters_Content;
 import Pages.ParentClass_CostCenters;
-import Utilities.Driver;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
 
-import java.util.concurrent.TimeUnit;
-
 public class CostCentersStep {
 
 
     WebDriver driver;
-    MainContent_CostCenters mainContent = new MainContent_CostCenters();
+    CostCenters_Content mainContent = new CostCenters_Content();
     LeftNav_CostCenters leftNav = new LeftNav_CostCenters();
     ParentClass_CostCenters parentSalaryType=new ParentClass_CostCenters();
 

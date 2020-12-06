@@ -1,22 +1,18 @@
 package StepDefinitions;
 
 import Pages.LeftNav_SalaryTypes;
-import Pages.MainContent_SalaryTypes;
+import Pages.SalaryTypes_Content;
 import Pages.ParentClass_SalaryTypes;
-import Utilities.Driver;
 import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
-
-import java.util.concurrent.TimeUnit;
 
 public class SalaryTypesStep {
 
 
     WebDriver driver;
-    MainContent_SalaryTypes mainContent = new MainContent_SalaryTypes();
+    SalaryTypes_Content mainContent = new SalaryTypes_Content();
     LeftNav_SalaryTypes leftNav = new LeftNav_SalaryTypes();
     ParentClass_SalaryTypes parentSalaryType=new ParentClass_SalaryTypes();
 

@@ -9,13 +9,13 @@ import org.testng.Assert;
 
 import java.util.List;
 
-public class MainContent_SalaryTypes extends ParentClass_SalaryTypes {
+public class SalaryTypes_Content extends ParentClass_SalaryTypes {
 
 
     WebElement myElement;
     WebElement currentElemet;
 
-    public MainContent_SalaryTypes() {
+    public SalaryTypes_Content() {
 
         PageFactory.initElements(driver, this);
 

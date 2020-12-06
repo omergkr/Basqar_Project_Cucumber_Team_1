@@ -9,13 +9,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainContent_CostCenters extends ParentClass_CostCenters {
+public class CostCenters_Content extends ParentClass_CostCenters {
 
 
     WebElement myElement;
     WebElement currentElemet;
 
-    public MainContent_CostCenters() {
+    public CostCenters_Content() {
 
         PageFactory.initElements(driver, this);
 
