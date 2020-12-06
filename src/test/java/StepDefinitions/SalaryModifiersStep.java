@@ -4,6 +4,7 @@ import Pages.LeftNav_Subjects;
 import Pages.ParentClass_Subject;
 import Pages.Subjects_SalaryModifiers_Content;
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
 public class SalaryModifiersStep {
