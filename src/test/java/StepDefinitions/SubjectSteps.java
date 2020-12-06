@@ -1,5 +1,6 @@
 package StepDefinitions;
 
+
 import Pages.LeftNav_Subjects;
 import Pages.ParentClass_Subject;
 import Pages.Subjects_SalaryModifiers_Content;
@@ -10,41 +11,30 @@ import cucumber.api.java.en.When;
 public class SubjectSteps {
 
 ParentClass_Subject parentElement =new ParentClass_Subject();
-    LeftNav_Subjects leftNavSubjects = new LeftNav_Subjects();
+    LeftNav_Subjects leftNavSubject = new LeftNav_Subjects();
     Subjects_SalaryModifiers_Content subjectAndSalaryModifiers = new Subjects_SalaryModifiers_Content();
 
     @Then("^Navigate to subject page$")
     public void navigate_to_subject_page()  {
 
-        leftNavSubjects.findElementAndClickFunction("education");
-        leftNavSubjects.findElementAndClickFunction("setupEducation");
-        leftNavSubjects.findElementAndClickFunction("subject");
+        leftNavSubject.findElementAndClickFunction("education");
+        leftNavSubject.findElementAndClickFunction("setupEducation");
+        leftNavSubject.findElementAndClickFunction("subject");
 
     }
 
 
 
-    @Then("^Success message should be displayed$")
-    public void success_message_should_be_displayed() {
-
-
-
-
-    }
-
-
-//    @When("^click on element with name$")
-//    public void clickOnElementWithName() {
-//    }
-
-    @Then("^Create a Subject name as \"([^\"]*)\" and code as \"([^\"]*)\"$")
-    public void createASubjectNameAsAndCodeAs(String name, String code) throws InterruptedException {
+    @Then("^Create a new Subject name as \"([^\"]*)\" and code as \"([^\"]*)\"$")
+    public void createAnewSubjectNameAsAndCodeAs(String name, String code) throws InterruptedException {
 Thread.sleep(1000);
         subjectAndSalaryModifiers.findAndClickElement("subjectAddButton");
         Thread.sleep(1000);
         subjectAndSalaryModifiers.findElementAndSendKeys("nameInput","grup1");
 
         subjectAndSalaryModifiers.findElementAndSendKeys("codeInput","1234");
+
+
 
         subjectAndSalaryModifiers.findAndClickElement("CategoryListBtn");
 
@@ -57,11 +47,10 @@ Thread.sleep(1000);
         subjectAndSalaryModifiers.findAndClickElement("SubjectSaveButton");
 
 
+
     }
 
-//    @And("^Succes message should be displayed$")
-//    public void succesMessageShouldBeDisplayed() {
-//    }
+
 
 
     @Then("^Subject page title control$")
@@ -70,24 +59,24 @@ Thread.sleep(1000);
         subjectAndSalaryModifiers.findElementAndVerifyContainsText("subjectTitle","Subjects");
     }
 
-    @And("^error message should be displayed$")
-    public void errorMessageShouldBeDisplayed() {
+    @And("^new subject error message should be displayed$")
+    public void newsubjecterrorMessageShouldBeDisplayed() {
 
         subjectAndSalaryModifiers.findElementAndVerifyContainsText("newSubjectError","already exists.");
     }
 
     @Then("^user delete \"([^\"]*)\"$")
-    public void userDelete(String usernameDelete) {
-
-       subjectAndSalaryModifiers.editAndDeleteFunction("grup1","delete");
+    public void userDelete(String usernameDelete) throws InterruptedException {
+Thread.sleep(1000);
+       subjectAndSalaryModifiers.editAndDeleteFunction(usernameDelete,"delete");
 
        subjectAndSalaryModifiers.findAndClickElement("yesButton");
 
        subjectAndSalaryModifiers.findAndClickElement("yesSubjectButton");
     }
 
-    @When("^User edit the \"([^\"]*)\" to \"([^\"]*)\"$")
-    public void userEditTheTo(String searchSubjectName, String newSubjectName)  {
+    @When("^User edit subject the \"([^\"]*)\" to \"([^\"]*)\"$")
+    public void userEditSubjectTheTo(String searchSubjectName, String newSubjectName)  {
         subjectAndSalaryModifiers.editAndDeleteFunction(searchSubjectName, "edit");
         subjectAndSalaryModifiers.findElementAndSendKeys("nameInput", newSubjectName);
         subjectAndSalaryModifiers.findAndClickElement("saveButton");
@@ -99,23 +88,23 @@ Thread.sleep(1000);
       subjectAndSalaryModifiers.findAndClickElement("activeButton");
     }
 
-//    @Then("^When searching by  name as \"([^\"]*)\"$")
-//    public void whenSearchingByNameAs(String name)  {
-//        subjectAndSalaryModifiers.findElementAndSendKeys("searchName",name);
-//        subjectAndSalaryModifiers.findAndClickElement("searchButton");
-//
-//    }
+    @Then("^When searching by subject name as \"([^\"]*)\"$")
+    public void whenSearchingBySubjectNameAs(String name)  {
+        subjectAndSalaryModifiers.findElementAndSendKeys("searchName",name);
+        subjectAndSalaryModifiers.findAndClickElement("searchButton");
 
-//    @Then("^Check list with listname as \"([^\"]*)\" and searchtext as \"([^\"]*)\"$")
-//    public void checkListWithListnameAsAndSearchtextAs(String listname, String text)  {
-//        subjectAndSalaryModifiers.checklist(listname,text);
-//    }
+    }
+
+    @Then("^Check list with subject listname as \"([^\"]*)\" and searchtext as \"([^\"]*)\"$")
+    public void checkListWithSubjectListnameAsAndSearchtextAs(String listname, String text)  {
+        subjectAndSalaryModifiers.checklist(listname,text);
+    }
 
     @Then("^user subject category should not be deleted$")
     public void userSubjectCategoryShouldNotBeDeleted() {
-parentElement.scrollToElement(leftNavSubjects.SubjectCategoriesButton);
+parentElement.scrollToElement(leftNavSubject.SubjectCategoriesButton);
 
-leftNavSubjects.findElementAndClickFunction("SubjectCategoriesButton");
+leftNavSubject.findElementAndClickFunction("SubjectCategoriesButton");
 
     }
 
@@ -128,10 +117,13 @@ leftNavSubjects.findElementAndClickFunction("SubjectCategoriesButton");
     }
 
 
+    @Then("^User not be subject deleted as \"([^\"]*)\"$")
+    public void userNotBeSubjectDeletedAs(String name) throws InterruptedException {
+Thread.sleep(1000);
 
-    @Then("^user not be deleted as \"([^\"]*)\"$")
-    public void userNotBeDeletedAs(String name)  {
         subjectAndSalaryModifiers.findAndClickElement("deleteSubjectButtonList");
-        subjectAndSalaryModifiers.findAndClickElement("yesSubjectButton");
+        Thread.sleep(1000);
+        subjectAndSalaryModifiers.findAndClickElement("yesButton");
+
     }
 }
