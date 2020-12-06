@@ -1,9 +1,8 @@
 Feature: Login Functionality
 
   Background:
-    Given Navigate to basqar
-    When Enter username and password and  click Login button
-    Then User should login successfully
+    Given Navigate to basqar for Salary Page
+    When Enter username and password and  click Login button for Salary Page
     Given Navigate to Salary Types page
 
 
@@ -13,18 +12,18 @@ Feature: Login Functionality
   Scenario: US_8 TC_02 (Creat a Salary Types)
 
     When click add button
-    Then Enter name as "FatihÇetin" click User Type and Click Save Button
-    Then Success message should be displayed
+    Then Enter name as "FatihÇetin" click User Type and Click Save Button for Salary Page
+    Then Success message should be displayed for Salary Page
 
   Scenario: US_8 TC_03 (User have to a name add)
     When click add button
-    Then User have to name add
+    Then User have to name add for Salary Page
 
   Scenario: US_8 TC_04 (Previously added  error message)
 
     When click add button
     Then Enter name as "Fatihakar4" click User Type and Click Save Button
-    And Erros message should be displayed
+    And Erros message should be displayed for Salary Page
 
 
   Scenario: US_8 TC_05 (Salary Types Delete)

@@ -3,10 +3,15 @@ package StepDefinitions;
 import Pages.LeftNav_SalaryTypes;
 import Pages.SalaryTypes_Content;
 import Pages.ParentClass_SalaryTypes;
+import Utilities.Driver;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
+
+import java.util.concurrent.TimeUnit;
 
 public class SalaryTypesStep {
 
@@ -17,34 +22,23 @@ public class SalaryTypesStep {
     ParentClass_SalaryTypes parentSalaryType=new ParentClass_SalaryTypes();
 
 
-//    @Given("^Navigate to basqar$")
-//    public void navigateToBasqar() {
-//
-//        driver = Driver.getDriver();
-//        driver.get("https://test.basqar.techno.study/");
-//        driver.manage().window().maximize();
-//        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-//
-//
-//    }
-//
-//
-//    @When("^Enter username and password and  click Login button$")
-//    public void enterUsernameAndPasswordAndClickLoginButton() {
-//
-//
-//        mainContent.findElementAndSendKeys("username", "daulet2030@gmail.com");
-//        mainContent.findElementAndSendKeys("password", "TechnoStudy123@");
-//        mainContent.findAndClickElement("loginButton");
-//        mainContent.findAndClickElement("gotItButton");
-//
-//
-//    }
-//    @Then("^User should login successfully$")
-//    public void user_should_login_successfully() {
-//
-//    }
+    @Given("^Navigate to basqar for Salary Page$")
+    public void navigateToBasqarForSalaryPage() {
+        driver = Driver.getDriver();
+        driver.get("https://test.basqar.techno.study/");
+       driver.manage().window().maximize();
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    }
+
+    @When("^Enter username and password and  click Login button for Salary Page$")
+    public void enterUsernameAndPasswordAndClickLoginButtonForSalaryPage() {
+        mainContent.findElementAndSendKeys("username", "daulet2030@gmail.com");
+        mainContent.findElementAndSendKeys("password", "TechnoStudy123@");
+        mainContent.findAndClickElement("loginButton");
+       mainContent.findAndClickElement("gotItButton");
+    }
+
 
 
     
@@ -65,37 +59,42 @@ public class SalaryTypesStep {
 
     }
 
+    @Then("^Success message should be displayed for Salary Page$")
+    public void successMessageShouldBeDisplayedForSalaryPage() {
+        mainContent.findElementAndVerifyContainsText("successfullytext", "Salary Type successfully created");
+    }
 
-//    @Then("^Success message should be displayed$")
-//    public void successMessageShouldBeDisplayed() {
-//        mainContent.findElementAndVerifyContainsText("successfullytext", "Salary Type successfully created");
-//    }
 
     @Then("^SalaryTypes page title control$")
     public void salarytypesPageTitleControl() {
         mainContent.findElementAndVerifyContainsText("SalaryTypesTittle", "Salary Types");
     }
 
-//    @Then("^Enter name as \"([^\"]*)\" click User Type and Click Save Button$")
-//    public void enterNameAsClickUserTypeAndClickSaveButton(String userName) {
-//
-//        mainContent.findElementAndSendKeys("nameInput", userName);
-//        mainContent.findAndClickElement("userType");
-//        mainContent.findAndClickElement("AdministratorButton");
-//        mainContent.findAndClickElement("saveButton");
-//
-//    }
+    @Then("^Enter name as \"([^\"]*)\" click User Type and Click Save Button for Salary Page$")
+    public void enterNameAsClickUserTypeAndClickSaveButtonForSalaryPage(String userName)  {
+        mainContent.findElementAndSendKeys("nameInput", userName);
+        mainContent.findAndClickElement("userType");
+        mainContent.findAndClickElement("AdministratorButton");
+        mainContent.findAndClickElement("saveButton");
 
-//    @And("^Erros message should be displayed$")
-//    public void errosMessageShouldBeDisplayed() {
-//        mainContent.findElementAndVerifyContainsText("errorMessage", "Error!");
-//    }
+    }
 
-//    @Then("^User have to name add$")
-//    public void userHaveToNameAdd() {
-//        if (mainContent.saveButton.isEnabled())
-//            mainContent.findAndClickElement("saveButton");
-//    }
+    @And("^Erros message should be displayed for Salary Page$")
+    public void errosMessageShouldBeDisplayedForSalaryPage() {
+        mainContent.findElementAndVerifyContainsText("errorMessage", "Error!");
+    }
+
+
+    @Then("^User have to name add for Salary Page$")
+    public void userHaveToNameAddForSalaryPage() {
+
+       if (mainContent.saveButton.isEnabled())
+           mainContent.findAndClickElement("saveButton");
+
+
+
+    }
+
 
 
     @Then("^Success delete message should be displayed$")
@@ -140,7 +139,6 @@ public class SalaryTypesStep {
     public void successActivOrInactivMessageShouldBeDisplayed() {
         mainContent.findElementAndVerifyContainsText("activeSuccessMessage", "Salary Type successfully updated");
     }
-
 
 
 
