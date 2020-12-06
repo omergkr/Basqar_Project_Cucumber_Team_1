@@ -13,6 +13,10 @@ public class Human_SalaryConstantsContentSteps {
     @When("^HumannResources click on element with nameeE$")
     public void humannresourcesClickOnElementWithNameeE() {
 
+
+
+
+
         human.findAndClickElement("humanResources");
         human.findAndClickElement("Setup");
         human.findAndClickElement("salary_Constants");
