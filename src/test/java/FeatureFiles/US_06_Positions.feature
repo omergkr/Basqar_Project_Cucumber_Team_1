@@ -131,6 +131,7 @@ Feature: Human Resources Positions Functionality
     Then Control to verification message
       | containsmesaj | successfully |
 
+  @SmokeTest
   Scenario: US_06 TC_08
     When click on button with button name
       | humanResources      |
