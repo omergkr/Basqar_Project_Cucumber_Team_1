@@ -1,12 +1,15 @@
 package Runners;
 
+import Utilities.Driver;
 import com.cucumber.listener.Reporter;
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 
 @CucumberOptions(
-        tags ={"@RegressionTest"},
+        tags ={"@SmokeTest"},
         features = {"src/test/java/FeatureFiles"},
         glue = {"StepDefinitions"},
         dryRun = false,
@@ -19,7 +22,21 @@ import org.testng.annotations.AfterClass;
 )
 
 
-public class HumanResourrcesPositionSalaryTest  extends AbstractTestNGCucumberTests {
+public class SmokeTest_parallel extends AbstractTestNGCucumberTests {
+
+
+    @BeforeClass
+    @Parameters("browser")
+    public static void beforClass(String browser)
+    {
+        Driver.threadBrowserName.set(browser);
+
+    }
+
+
+
+
+
 
     @AfterClass
     public static void afterClass()
@@ -35,5 +52,7 @@ public class HumanResourrcesPositionSalaryTest  extends AbstractTestNGCucumberTe
 
 
     }
+
+
 
 }
