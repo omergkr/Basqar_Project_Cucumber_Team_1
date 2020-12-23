@@ -1,4 +1,4 @@
-@RegressionTest
+
 Feature: Human Resources Positions Functionality
 
   Background:
@@ -6,7 +6,7 @@ Feature: Human Resources Positions Functionality
     Given Navigate to basqar
     Then  Enter username and password and  click Login button
 
-
+  @RegressionTest
   Scenario: US_06 TC_01
     When click on button with button name
       | humanResources      |
