@@ -468,6 +468,38 @@ public class PositionSalary_Positions_BankAccounts_Content extends ParentClass {
 
     }
 
+//    public WebElement getElementFrom(ElementName elementName) {
+//        Field field;
+//        DialogContent objectInstance = new DialogContent();
+//        WebElement value = null;
+//
+//        try {
+//            field = DialogContent.class.getDeclaredField(elementName.toString());
+//            value = (WebElement) field.get(objectInstance);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//        return value;
+//    }
+//
+//
+//
+//    public void clickTo(ElementName elementName) {
+//        myElement = getElementFrom(elementName);
+//        clickFunction(myElement);
+//    }
+//
+//
+//    public void sendKeysTo(ElementName elementName, String value) {
+//        myElement = getElementFrom(elementName);
+//        sendKeysFunction(myElement, value);
+//    }
+//
+//
+//    public void verifyContainsText(ElementName elementName, String msg) {
+//        myElement = getElementFrom(elementName);
+//        verifyElementContainsText(myElement, msg);
+//    }
 
 }
 

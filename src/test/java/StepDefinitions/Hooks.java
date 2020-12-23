@@ -83,7 +83,7 @@ public class Hooks extends ParentClass {
 
 
 
-     //   Driver.quitDriver();
+        Driver.quitDriver();
     }
 
 

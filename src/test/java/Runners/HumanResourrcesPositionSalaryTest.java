@@ -6,7 +6,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 import org.testng.annotations.AfterClass;
 
 @CucumberOptions(
-//        tags ={"@RegressionTest"},
+        tags ={"@RegressionTest"},
         features = {"src/test/java/FeatureFiles"},
         glue = {"StepDefinitions"},
         dryRun = false,
