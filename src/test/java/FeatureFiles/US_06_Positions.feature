@@ -1,3 +1,4 @@
+@RegressionTest
 Feature: Human Resources Positions Functionality
 
   Background:
@@ -21,8 +22,8 @@ Feature: Human Resources Positions Functionality
       | positions           |
       | addbutton           |
     Then Send text with inputbox name
-      | inputPositionName | orhangoker |
-      | inputShortName    | orgkr      |
+      | inputPositionName | orhangoker23232 |
+      | inputShortName    | orgkr23213      |
     And click on button with button name
       | saveButton |
     Then Control to verification message
@@ -48,14 +49,14 @@ Feature: Human Resources Positions Functionality
       | positions           |
       | addbutton           |
     Then Send text with inputbox name
-      | inputPositionName | orhanegoker1 |
-      | inputShortName    | orgkr1       |
+      | inputPositionName | orhanegoker122 |
+      | inputShortName    | orgkr122       |
     When click on button with button name
       | saveButton |
       | addbutton  |
     Then Send text with inputbox name
-      | inputPositionName | orhanegoker1 |
-      | inputShortName    | orgkr1       |
+      | inputPositionName | orhanegoker122 |
+      | inputShortName    | orgkr122       |
     When click on button with button name
       | saveButton |
     Then Control to verification message
@@ -68,12 +69,12 @@ Feature: Human Resources Positions Functionality
       | positions           |
       | addbutton           |
     Then Send text with inputbox name
-      | inputPositionName | orhangoker4 |
-      | inputShortName    | orgkr4      |
+      | inputPositionName | orhangoker49 |
+      | inputShortName    | orgkr49      |
     When click on button with button name
       | saveButton |
     Then Send text with inputbox name
-      | PositionNameSearch | orhangoker4 |
+      | PositionNameSearch | orhangoker49 |
     And click on button with button name
       | searchButton |
       | deletButton  |
@@ -89,18 +90,18 @@ Feature: Human Resources Positions Functionality
       | positions           |
       | addbutton           |
     Then Send text with inputbox name
-      | inputPositionName | orhangoker6 |
-      | inputShortName    | orgkr6      |
+      | inputPositionName | orhangoker69 |
+      | inputShortName    | orgkr69      |
     When click on button with button name
       | saveButton |
     Then Send text with inputbox name
-      | PositionNameSearch | orhangoker6 |
+      | PositionNameSearch | orhangoker69 |
     And click on button with button name
       | searchButton |
       | editButton   |
     Then Send text with inputbox name
-      | inputPositionName | orhangoker66 |
-      | inputShortName    | orgkr66      |
+      | inputPositionName | orhangoker669 |
+      | inputShortName    | orgkr669      |
     When click on button with button name
       | saveButton |
     Then Control to verification message
@@ -114,12 +115,12 @@ Feature: Human Resources Positions Functionality
       | positions           |
       | addbutton           |
     Then Send text with inputbox name
-      | inputPositionName | orhangoker7 |
-      | inputShortName    | orgkr7      |
+      | inputPositionName | orhangoker79 |
+      | inputShortName    | orgkr79      |
     When click on button with button name
       | saveButton |
     Then Send text with inputbox name
-      | PositionNameSearch | orhangoker7 |
+      | PositionNameSearch | orhangoker79 |
     And click on button with button name
       | searchButton |
       | ectiveButton |
