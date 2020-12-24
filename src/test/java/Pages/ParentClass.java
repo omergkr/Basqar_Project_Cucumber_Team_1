@@ -21,7 +21,7 @@ public class ParentClass {
     public ParentClass() {
 
         driver= Driver.getDriver();
-        wait=new WebDriverWait(driver,20);
+        wait=new WebDriverWait(driver,30);
 
 
     }

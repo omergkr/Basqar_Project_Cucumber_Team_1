@@ -100,7 +100,7 @@
 
                     <includes>
                         <!-- for  run class or classes-->
-                        <include>**/RegressionTest.java</include>
+                        <include>**/SmokeTest.java</include>
                     </includes>
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
